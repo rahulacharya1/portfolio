@@ -11,9 +11,9 @@
     <!-- Navbar -->
     <header class="flex items-center justify-between px-5 md:px-20 py-6">
 
-        <h1 class="text-2xl font-bold text-sky-400">
+        <a href="home.html" class="text-2xl font-bold text-sky-400">
             Rahul<span class="text-white"> Acharya</span>
-        </h1>
+        </a>
 
         <!-- Desktop -->
         <nav class="space-x-6 hidden md:block">
@@ -51,86 +51,8 @@
             </h2>
 
             <!-- Skills Grid -->
-            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-
-                <!-- Skill Card -->
-                <div class="bg-slate-800 rounded-2xl p-6 shadow-lg hover:-translate-y-2 transition">
-                    <h3 class="text-xl font-semibold text-sky-400 mb-2">HTML</h3>
-                    <p class="text-gray-400">
-                        Semantic markup, accessibility, SEO-friendly structure.
-                    </p>
-                </div>
-
-                <div class="bg-slate-800 rounded-2xl p-6 shadow-lg hover:-translate-y-2 transition">
-                    <h3 class="text-xl font-semibold text-sky-400 mb-2">CSS</h3>
-                    <p class="text-gray-400">
-                        Responsive layouts, Flexbox, Grid, animations.
-                    </p>
-                </div>
-
-                <div class="bg-slate-800 rounded-2xl p-6 shadow-lg hover:-translate-y-2 transition">
-                    <h3 class="text-xl font-semibold text-sky-400 mb-2">Tailwind CSS</h3>
-                    <p class="text-gray-400">
-                        Utility-first styling, rapid UI development.
-                    </p>
-                </div>
-
-                <div class="bg-slate-800 rounded-2xl p-6 shadow-lg hover:-translate-y-2 transition">
-                    <h3 class="text-xl font-semibold text-sky-400 mb-2">JavaScript</h3>
-                    <p class="text-gray-400">
-                        DOM manipulation, ES6+, async programming.
-                    </p>
-                </div>
-
-                <div class="bg-slate-800 rounded-2xl p-6 shadow-lg hover:-translate-y-2 transition">
-                    <h3 class="text-xl font-semibold text-sky-400 mb-2">React</h3>
-                    <p class="text-gray-400">
-                        Components, hooks, state management.
-                    </p>
-                </div>
-
-                <div class="bg-slate-800 rounded-2xl p-6 shadow-lg hover:-translate-y-2 transition">
-                    <h3 class="text-xl font-semibold text-sky-400 mb-2">Firebase</h3>
-                    <p class="text-gray-400">
-                        Authentication, Firestore, hosting basics.
-                    </p>
-                </div>
-
-                <div class="bg-slate-800 rounded-2xl p-6 shadow-lg hover:-translate-y-2 transition">
-                    <h3 class="text-xl font-semibold text-sky-400 mb-2">Git</h3>
-                    <p class="text-gray-400">
-                        Version control, branching, merging, collaborative workflows.
-                    </p>
-                </div>
-
-                <div class="bg-slate-800 rounded-2xl p-6 shadow-lg hover:-translate-y-2 transition">
-                    <h3 class="text-xl font-semibold text-sky-400 mb-2">GitHub</h3>
-                    <p class="text-gray-400">
-                        Repository hosting, pull requests, issue tracking, CI/CD.
-                    </p>
-                </div>
-
-                <div class="bg-slate-800 rounded-2xl p-6 shadow-lg hover:-translate-y-2 transition">
-                    <h3 class="text-xl font-semibold text-sky-400 mb-2">C Language</h3>
-                    <p class="text-gray-400">
-                        Algorithms, data structures, low-level programming.
-                    </p>
-                </div>
-
-                <div class="bg-slate-800 rounded-2xl p-6 shadow-lg hover:-translate-y-2 transition">
-                    <h3 class="text-xl font-semibold text-sky-400 mb-2">Python</h3>
-                    <p class="text-gray-400">
-                        Data analysis, web scraping, automation, Django.
-                    </p>
-                </div>
-
-                <div class="bg-slate-800 rounded-2xl p-6 shadow-lg hover:-translate-y-2 transition">
-                    <h3 class="text-xl font-semibold text-sky-400 mb-2">Django</h3>
-                    <p class="text-gray-400">
-                        Full-stack development, RESTful APIs, ORM, deployment.
-                    </p>
-                </div>
-
+            <div id="skills-container" class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <!-- Using Array and Loop -->
             </div>
         </div>
     </section>
@@ -140,14 +62,7 @@
         © 2025 Rahul Kumar Acharya. All rights reserved.
     </footer>
 
-    <!-- Mobile Toggle Script -->
-    <script>
-        const btn = document.getElementById("menu-btn");
-        const menu = document.getElementById("mobile-menu");
-        btn.addEventListener("click", () => {
-            menu.classList.toggle("hidden");
-        });
-    </script>
+    <script src="JS/skills.js"></script>
 
 </body>
 </html>

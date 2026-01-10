@@ -6,96 +6,62 @@
     <title>Projects | Rahul Kumar Acharya</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-slate-900 text-gray-200">
+
+<body class="bg-slate-900 text-gray-200 min-h-screen flex flex-col">
 
     <!-- Navbar -->
     <header class="flex items-center justify-between px-5 md:px-20 py-6">
-        <h1 class="text-2xl font-bold text-sky-400">
+        <a href="home.html" class="text-2xl font-bold text-sky-400">
             Rahul<span class="text-white"> Acharya</span>
-        </h1>
+        </a>
 
-        <!-- Desktop -->
+        <!-- Desktop Nav -->
         <nav class="space-x-6 hidden md:block">
-            <a href="home.html" class="hover:text-sky-400">Home</a>
-            <a href="about.html" class="hover:text-sky-400">About</a>
-            <a href="skills.html" class="hover:text-sky-400">Skills</a>
-            <a href="projects.html" class="text-sky-400">Projects</a>
-            <a href="certificates.html" class="hover:text-sky-400">Certificates</a>
-            <a href="contact.html" class="hover:text-sky-400">Contact</a>
+            <a href="home.html" class="hover:text-sky-400 transition">Home</a>
+            <a href="about.html" class="hover:text-sky-400 transition">About</a>
+            <a href="skills.html" class="hover:text-sky-400 transition">Skills</a>
+            <a href="projects.html" class="text-sky-400 font-semibold">Projects</a>
+            <a href="certificates.html" class="hover:text-sky-400 transition">Certificates</a>
+            <a href="contact.html" class="hover:text-sky-400 transition">Contact</a>
         </nav>
 
-        <!-- Mobile -->
-        <button id="menu-btn" class="md:hidden text-3xl text-sky-400">
+        <!-- Mobile Button -->
+        <button id="menu-btn" class="md:hidden text-3xl text-sky-400 focus:outline-none">
             ☰
         </button>
     </header>
 
-    <!-- Mobile Dropdown -->
-    <nav id="mobile-menu" class="hidden flex flex-col gap-4 bg-slate-800 p-5 text-center md:hidden">
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu"
+        class="hidden md:hidden flex flex-col gap-4 bg-slate-800 px-6 py-6 text-center">
         <a href="home.html" class="hover:text-sky-400">Home</a>
         <a href="about.html" class="hover:text-sky-400">About</a>
         <a href="skills.html" class="hover:text-sky-400">Skills</a>
-        <a href="projects.html" class="text-sky-400">Projects</a>
+        <a href="projects.html" class="text-sky-400 font-semibold">Projects</a>
         <a href="certificates.html" class="hover:text-sky-400">Certificates</a>
         <a href="contact.html" class="hover:text-sky-400">Contact</a>
     </nav>
 
     <!-- Projects Section -->
-    <section class="px-6 md:px-10 py-6">
+    <main class="flex-1 px-6 md:px-10 py-10">
         <div class="max-w-6xl mx-auto">
 
-            <h2 class="text-4xl font-bold text-center mb-14 mt-2">
+            <h2 class="text-4xl font-bold text-center mb-14">
                 My <span class="text-sky-400">Projects</span>
             </h2>
 
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-
-                <!-- Project Template -->
-                <!-- Project 1 -->
-                <div
-                    class="bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl hover:-translate-y-2 transition">
-                    <img src="img/swiggy.png" alt="Swiggy Clone" class="w-full h-40 object-cover" />
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-sky-400 mb-2">Swiggy Clone</h3>
-                        <p class="text-gray-400 mb-4">
-                            Food delivery UI clone built using HTML, CSS and JavaScript.
-                        </p>
-                        <a href="#" class="text-sky-400 font-semibold hover:underline">GitHub</a>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div
-                    class="bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl hover:-translate-y-2 transition">
-                    <img src="img/spotify.png" alt="Spotify Clone" class="w-full h-40 object-cover" />
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-sky-400 mb-2">Spotify Clone</h3>
-                        <p class="text-gray-400 mb-4">
-                            Responsive music streaming UI using HTML, CSS and JavaScript.
-                        </p>
-                        <a href="#" class="text-sky-400 font-semibold hover:underline">GitHub</a>
-                    </div>
-                </div>
-
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10" id="projects-container">
+                <!-- Using Array and Loop -->
             </div>
         </div>
-    </section>
+    </main>
 
     <!-- Footer -->
     <footer class="text-center py-6 text-gray-500 bg-slate-950">
         © 2025 Rahul Kumar Acharya. All rights reserved.
     </footer>
 
-    <!-- Mobile Toggle Script -->
-
-    <script>
-        const menuBtn = document.getElementById("menu-btn");
-        const mobileMenu = document.getElementById("mobile-menu");
-
-        menuBtn.addEventListener("click", () => {
-            mobileMenu.classList.toggle("hidden");
-        });
-    </script>
+    <script src="JS/projects.js"></script>
 
 </body>
 </html>

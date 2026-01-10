@@ -11,9 +11,9 @@
     <!-- Navbar -->
     <header class="flex items-center justify-between px-5 md:px-20 py-6">
 
-        <h1 class="text-2xl font-bold text-sky-400">
+        <a href="home.html" class="text-2xl font-bold text-sky-400">
             Rahul<span class="text-white"> Acharya</span>
-        </h1>
+        </a>
 
         <!-- Desktop Menu -->
         <nav class="space-x-6 hidden md:block">
@@ -47,56 +47,8 @@
             My <span class="text-sky-400">Certificates</span>
         </h2>
 
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-
-            <!-- Add your images here -->
-            <div onclick="openImg('Images/1.jpg')"
-                class="bg-slate-800 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition">
-                <img src="Images/1.jpg" class="w-full h-[200px] sm:h-[240px] md:h-[280px] object-cover">
-            </div>
-
-            <div onclick="openImg('Images/2.jpg')"
-                class="bg-slate-800 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition">
-                <img src="Images/2.jpg" class="w-full h-[200px] sm:h-[240px] md:h-[280px] object-cover">
-            </div>
-
-            <div onclick="openImg('Images/3.jpg')"
-                class="bg-slate-800 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition">
-                <img src="Images/3.jpg" class="w-full h-[200px] sm:h-[240px] md:h-[280px] object-cover">
-            </div>
-
-            <div onclick="openImg('Images/4.jpg')"
-                class="bg-slate-800 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition">
-                <img src="Images/4.jpg" class="w-full h-[200px] sm:h-[240px] md:h-[280px] object-cover">
-            </div>
-
-            <div onclick="openImg('Images/5.jpg')"
-                class="bg-slate-800 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition">
-                <img src="Images/5.jpg" class="w-full h-[200px] sm:h-[240px] md:h-[280px] object-cover">
-            </div>
-
-            <div onclick="openImg('Images/6.jpg')"
-                class="bg-slate-800 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition">
-                <img src="Images/6.jpg" class="w-full h-[200px] sm:h-[240px] md:h-[280px] object-cover">
-            </div>
-
-            <div onclick="openImg('Images/7.jpg')"
-                class="bg-slate-800 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition">
-                <img src="Images/7.jpg" class="w-full h-[200px] sm:h-[240px] md:h-[280px] object-cover">
-            </div>
-
-            <div onclick="openImg('Images/8.jpg')"
-                class="bg-slate-800 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition">
-                <img src="Images/8.jpg" class="w-full h-[200px] sm:h-[240px] md:h-[280px] object-cover">
-            </div>
-
-            <div onclick="openImg('Images/9.jpg')"
-                class="bg-slate-800 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition">
-                <img src="Images/9.jpg" class="w-full h-[200px] sm:h-[240px] md:h-[280px] object-cover">
-            </div>
-
-            <!-- Add more the same way -->
-
+        <div id="certificates-container" class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <!-- Using Array and Loop -->
         </div>
     </section>
 
@@ -110,19 +62,7 @@
         © 2026 Rahul Kumar Acharya. All rights reserved.
     </footer>
 
-    <script>
-        const menuBtn = document.getElementById("menu-btn");
-        const mobileMenu = document.getElementById("mobile-menu");
-        menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
-
-        function openImg(src) {
-            document.getElementById('popup-img').src = src;
-            document.getElementById('popup').classList.remove('hidden');
-        }
-        function closeImg() {
-            document.getElementById('popup').classList.add('hidden');
-        }
-    </script>
+    <script src="JS/certificates.js"></script>
 
 </body>
 </html>
