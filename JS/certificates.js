@@ -2,6 +2,7 @@ const certificates = [
     "Images/Certificates/1.jpg",
     "Images/Certificates/2.jpg",
     "Images/Certificates/3.jpg",
+    "Images/Certificates/10.jpg",
     "Images/Certificates/4.jpg",
     "Images/Certificates/5.jpg",
     "Images/Certificates/6.jpg",
