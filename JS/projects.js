@@ -1,9 +1,9 @@
 const projects = [
     {
         title: "Swiggy Clone",
-        description: "Food delivery UI clone built using HTML, CSS.",
+        description: "Food delivery UI clone built using HTML, Tailwind CSS.",
         image: "Images/Projects/1.png",
-        github: "#"
+        github: "https://github.com/rahulkumaracharya199-prog/Swiggy-Clone"
     },
     {
         title: "Spotify Clone",
