@@ -7,9 +7,9 @@ const projects = [
     },
     {
         title: "Spotify Clone",
-        description: "Responsive music streaming UI using HTML, Tailwind CSS.",
+        description: "Music streaming UI clone built using HTML, CSS.",
         image: "Images/Projects/3.png",
-        github: "#"
+        github: "https://github.com/rahulkumaracharya199-prog/SpotifyClone"
     },
     {
         title: "Amazon Clone",
