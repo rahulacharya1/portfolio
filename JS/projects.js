@@ -15,7 +15,7 @@ const projects = [
         title: "Amazon Clone",
         description: "Responsive e-commerce UI built using HTML, CSS.",
         image: "Images/Projects/2.png",
-        github: "#"
+        github: "https://github.com/rahulkumaracharya199-prog/Amazon-Clone"
     }
 ];
 
