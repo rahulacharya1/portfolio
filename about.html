@@ -6,7 +6,7 @@
     <title>About | Rahul Kumar Acharya</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-slate-900 text-gray-200">
+<body class="bg-slate-900 text-gray-200 min-h-screen">
 
     <!-- Navbar -->
     <header class="flex items-center justify-between px-5 md:px-20 py-6">
@@ -32,8 +32,7 @@
     </header>
 
     <!-- Mobile Dropdown -->
-    <nav id="mobile-menu"
-        class="hidden flex flex-col gap-4 bg-slate-800 p-5 text-center md:hidden">
+    <nav id="mobile-menu" class="hidden flex flex-col gap-4 bg-slate-800 p-5 text-center md:hidden">
         <a href="home.html" class="hover:text-sky-400">Home</a>
         <a href="about.html" class="text-sky-400">About</a>
         <a href="skills.html" class="hover:text-sky-400">Skills</a>
@@ -43,75 +42,65 @@
     </nav>
 
     <!-- About Section -->
-    <section class="px-5 md:px-10 py-4">
-        <div class="max-w-6xl mx-auto">
+    <section class="px-5 md:px-20 mt-10">
 
-            <h2 class="text-4xl font-bold text-center mb-14">
+        <div class="max-w-5xl mx-auto w-full">
+            <h2 class="text-4xl font-bold text-center mb-10">
                 About <span class="text-sky-400">Me</span>
             </h2>
 
-            <div class="grid md:grid-cols-2 gap-10 md:gap-20 items-center">
+            <div class="text-center">
+                <h3 class="text-2xl font-semibold mb-4">
+                    Frontend Developer & CSE Student
+                </h3>
 
-                <!-- Image -->
-                <div class="flex justify-center">
-                    <img src="Images/Rahul.png" alt="Rahul Kumar Acharya"
-                        class="w-64 md:w-[400px] md:h-[480px] object-cover rounded-2xl shadow-xl" />
-                </div>
+                <p class="text-gray-400 leading-relaxed mb-4">
+                    Hello! I'm <span class="text-white font-medium">Rahul Kumar Acharya</span>,
+                    a passionate Frontend Developer and Computer Science student from Bihar, India.
+                    I enjoy creating clean, modern, and responsive web interfaces.
+                </p>
 
-                <!-- Content -->
-                <div>
-                    <h3 class="text-2xl font-semibold mb-3">
-                        Frontend Developer & CSE Student
-                    </h3>
+                <p class="text-gray-400 leading-relaxed mb-4">
+                    I have experience with:
+                    <span class="text-white">HTML, CSS, JavaScript, React</span> and
+                    <span class="text-white">Tailwind CSS</span>.
+                    I have built multiple projects.
+                </p>
 
-                    <p class="text-gray-400 leading-relaxed mb-3">
-                        Hello! I'm <span class="text-white font-medium">Rahul Kumar Acharya</span>,
-                        a passionate frontend developer and computer science student from Bihar, India.
-                        I enjoy creating clean, modern, and responsive web interfaces.
-                    </p>
+                <p class="text-gray-400 leading-relaxed mb-4">
+                    Currently learning Backend Development with
+                    <span class="text-white">Python, Django</span> and
+                    <span class="text-white">Firebase</span>.
+                    My goal is to become a full-stack developer and work on real-world projects.
+                </p>
 
-                    <p class="text-gray-400 leading-relaxed mb-3">
-                        I have experience with:
-                        <span class="text-white">HTML, CSS, JavaScript, React</span> and
-                        <span class="text-white">Tailwind CSS</span>.
-                        I have built multiple website clones including Swiggy, Spotify, and Amazon.
-                    </p>
-
-                    <p class="text-gray-400 leading-relaxed mb-4">
-                        Currently learning backend development with
-                        <span class="text-white">Python, Django</span> and
-                        <span class="text-white">Firebase</span>.
-                        My goal is to become a full-stack developer and work on real-world projects.
-                    </p>
-
-                    <!-- Info -->
-                    <div class="grid grid-cols-2 gap-5 mb-5">
-                        <div>
-                            <p class="text-gray-400">Name:</p>
-                            <p class="font-medium">Rahul Kumar Acharya</p>
-                        </div>
-                        <div>
-                            <p class="text-gray-400">Location:</p>
-                            <p class="font-medium">Bihar, India</p>
-                        </div>
-                        <div>
-                            <p class="text-gray-400">Email:</p>
-                            <p class="font-medium break-all">rahulkumaracharya199@gmail.com</p>
-                        </div>
-                        <div>
-                            <p class="text-gray-400">Role:</p>
-                            <p class="font-medium">Frontend Developer</p>
-                        </div>
+                <!-- Info -->
+                <div class="grid grid-cols-2 gap-5 mb-5">
+                    <div>
+                        <p class="text-gray-400">Name:</p>
+                        <p class="font-medium">Rahul Kumar Acharya</p>
                     </div>
-
-                    <a href="contact.html"
-                        class="inline-block px-6 py-3 bg-sky-400 text-slate-900 rounded-full font-semibold hover:bg-sky-300 transition">
-                        Contact Me
-                    </a>
+                    <div>
+                        <p class="text-gray-400">Location:</p>
+                        <p class="font-medium">Bihar, India</p>
+                    </div>
+                    <div>
+                        <p class="text-gray-400">Email:</p>
+                        <p class="font-medium break-all">rahulkumaracharya199@gmail.com</p>
+                    </div>
+                    <div>
+                        <p class="text-gray-400">Role:</p>
+                        <p class="font-medium">Frontend Developer</p>
+                    </div>
                 </div>
 
+                <a href="contact.html"
+                    class="inline-block px-6 py-3 bg-sky-400 text-slate-900 rounded-full font-semibold hover:bg-sky-300 transition">
+                    Contact Me
+                </a>
             </div>
         </div>
+
     </section>
 
     <!-- Footer -->
