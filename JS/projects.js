@@ -19,10 +19,16 @@ const projects = [
     },
     {
         title: "Calculator",
-        description: "Responsive Calculator built using HTML, CSS, and JavaScript.",
+        description: "Responsive Calculator built using HTML, Tailwind CSS, and JavaScript.",
         image: "Images/Projects/4.png",
         github: "https://github.com/rahulkumaracharya199-prog/calculator-web-project"
-    }
+    },
+    {
+        title: "Password Strength Checker",
+        description: "Responsive Password Checker built using HTML, Tailwind CSS, and JavaScript.",
+        image: "Images/Projects/5.png",
+        github: "https://github.com/rahulkumaracharya199-prog/password-strength-checker"
+    },
 ];
 
 const container = document.getElementById("projects-container");
