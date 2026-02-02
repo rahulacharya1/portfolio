@@ -95,6 +95,12 @@ const certificates = [
         desc: "Hands-on exposure to Docker containers, Kubernetes fundamentals, and DevOps workflows.",
         date: "29 Dec 2025"
     },
+    {
+        src: "Images/Certificates/17.jpg",
+        title: "Beginner to Full Stack (PW)",
+        desc: "Attended Physics Wallah masterclass on beginner to full stack development roadmap",
+        date: "10 Jan 2026"
+    },
 ];
 
 const container = document.getElementById("certificates-container");
