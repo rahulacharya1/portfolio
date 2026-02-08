@@ -96,6 +96,18 @@ const certificates = [
         date: "29 Dec 2025"
     },
     {
+        src: "Images/Certificates/18.jpg",
+        title: "What Does It Take to Become a Microsoft SDE?",
+        desc: "Industry-focused session covering skills, roadmap, and expectations for Microsoft SDE roles.",
+        date: "31 January 2026"
+    },
+    {
+        src: "Images/Certificates/19.jpg",
+        title: "Build an E-Commerce Platform using React",
+        desc: "Hands-on masterclass focused on building a scalable e-commerce application using React.",
+        date: "7 February 2026"
+    },
+    {
         src: "Images/Certificates/17.jpg",
         title: "Beginner to Full Stack (PW)",
         desc: "Attended Physics Wallah masterclass on beginner to full stack development roadmap",
