@@ -29,6 +29,12 @@ const projects = [
         image: "Images/Projects/5.png",
         github: "https://github.com/rahulkumaracharya199-prog/password-strength-checker"
     },
+    {
+        title: "Tic Tac Toe Game",
+        description: "Responsive Tic Tac Toe game built with HTML, Tailwind CSS, and JavaScript.",
+        image: "Images/Projects/6.png",
+        github: "https://github.com/rahulkumaracharya199-prog/tic-tac-toe"
+    },
 ];
 
 const container = document.getElementById("projects-container");
