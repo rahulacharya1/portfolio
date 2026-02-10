@@ -113,6 +113,13 @@ const certificates = [
         desc: "Attended Physics Wallah masterclass on beginner to full stack development roadmap",
         date: "10 Jan 2026"
     },
+    {
+        src: "Images/Certificates/20.png",
+        title: "MY Bharat Budget Quest 2026",
+        desc: "Successfully participated in the online quiz 'MY Bharat Budget Quest 2026' conducted by the Ministry of Youth Affairs & Sports on MYBharat",
+        date: "09 Feb 2026"
+    }
+
 ];
 
 const container = document.getElementById("certificates-container");
