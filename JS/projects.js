@@ -35,6 +35,13 @@ const projects = [
         image: "Images/Projects/6.png",
         github: "https://github.com/rahulkumaracharya199-prog/tic-tac-toe"
     },
+    {
+        title: "Foodie House POS System",
+        description: "Modern Restaurant (POS) system built with HTML, Tailwind CSS, and JavaScript.",
+        image: "Images/Projects/7.png",
+        github: "https://github.com/rahulkumaracharya199-prog/foodie-house-pos"
+    },
+
 ];
 
 const container = document.getElementById("projects-container");
