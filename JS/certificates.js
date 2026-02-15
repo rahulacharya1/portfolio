@@ -67,59 +67,10 @@ const certificates = [
     },
     {
         src: "Images/Certificates/12.jpg",
-        title: "Advanced AI Marketer",
-        desc: "Advanced AI marketing concepts including GenAI tools, automation strategies, and modern digital growth techniques.",
-        date: "6 Jan 2026"
+        title: "Software Engineering Job Simulation",
+        desc: "CommonWealth Bank - Completed job simulation involving backend modificatio, React/Redux frontend.",
+        date: "Jan 2026"
     },
-    {
-        src: "Images/Certificates/13.jpg",
-        title: "Full Stack Development (GenAI Era)",
-        desc: "Participated in full stack development masterclass with focus on GenAI integration.",
-        date: "6 Jan 2026"
-    },
-    {
-        src: "Images/Certificates/14.jpg",
-        title: "Internshala ISP 55 Webinar",
-        desc: "Participated in Internshala Student Partner training webinar covering leadership, marketing, and communication skills.",
-        date: "7 Jan 2026"
-    },
-    {
-        src: "Images/Certificates/15.jpg",
-        title: "Internship Common Aptitude Test (ICAT)",
-        desc: "Participated in aptitude test focusing on logical reasoning, quantitative aptitude, and problem-solving skills.",
-        date: "2 Jan 2026"
-    },
-    {
-        src: "Images/Certificates/16.jpg",
-        title: "Docker & Kubernetes Masterclass",
-        desc: "Hands-on exposure to Docker containers, Kubernetes fundamentals, and DevOps workflows.",
-        date: "29 Dec 2025"
-    },
-    {
-        src: "Images/Certificates/18.jpg",
-        title: "What Does It Take to Become a Microsoft SDE?",
-        desc: "Industry-focused session covering skills, roadmap, and expectations for Microsoft SDE roles.",
-        date: "31 January 2026"
-    },
-    {
-        src: "Images/Certificates/19.jpg",
-        title: "Build an E-Commerce Platform using React",
-        desc: "Hands-on masterclass focused on building a scalable e-commerce application using React.",
-        date: "7 February 2026"
-    },
-    {
-        src: "Images/Certificates/17.jpg",
-        title: "Beginner to Full Stack (PW)",
-        desc: "Attended Physics Wallah masterclass on beginner to full stack development roadmap",
-        date: "10 Jan 2026"
-    },
-    {
-        src: "Images/Certificates/20.png",
-        title: "MY Bharat Budget Quest 2026",
-        desc: "Successfully participated in the online quiz 'MY Bharat Budget Quest 2026' conducted by the Ministry of Youth Affairs & Sports on MYBharat",
-        date: "09 Feb 2026"
-    }
-
 ];
 
 const container = document.getElementById("certificates-container");
@@ -138,7 +89,7 @@ certificates.forEach(cert => {
                     ${cert.title}
                 </h3>
 
-                <p class="text-slate-400 text-xs md:text-sm mt-1">
+                <p class="text-slate-400 text-xs md:text-sm mt-1 h-10">
                     ${cert.desc}
                 </p>
 
