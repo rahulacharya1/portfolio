@@ -41,6 +41,12 @@ const projects = [
         image: "Images/Projects/7.png",
         github: "https://github.com/rahulkumaracharya199-prog/foodie-house-pos"
     },
+    {
+        title: "Personal Portfolio Website",
+        description: "A fully responsive Personal Portfolio built with HTML, Tailwind CSS, and JavaScript.",
+        image: "Images/Projects/8.png",
+        github: "https://github.com/rahulkumaracharya199-prog/portfolio"
+    },
 
 ];
 
