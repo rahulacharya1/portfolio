@@ -113,28 +113,35 @@
 
     <!-- Mobile + Email Form Script -->
     <script>
-        // Mobile Menu Toggle
         const btn = document.getElementById("menu-btn");
         const menu = document.getElementById("mobile-menu");
         btn.addEventListener("click", () => menu.classList.toggle("hidden"));
 
-        // EmailJS Init (PUT YOUR PUBLIC KEY)
         emailjs.init("snvKLoLsnbQhYYZqB");
 
-        // Form Submit
         document.getElementById("contact-form").addEventListener("submit", function (e) {
             e.preventDefault();
 
             const form = this;
+            const submitBtn = form.querySelector("button[type='submit']");
+
+            submitBtn.disabled = true;
+            submitBtn.innerText = "Sending...";
+            submitBtn.classList.add("opacity-60", "cursor-not-allowed");
 
             emailjs.sendForm("service_g4tzdmo", "template_48c1c6t", form)
                 .then(() => {
                     alert("Message Sent Successfully! 😎");
-                    form.reset(); // 👈 clears name, email, message
+                    form.reset();
                 })
                 .catch(() => {
                     alert("Failed to send 😥 Try again!");
-                });
+                })
+                .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerText = "Send Message";
+                submitBtn.classList.remove("opacity-60", "cursor-not-allowed");
+            });
         });
 
     </script>

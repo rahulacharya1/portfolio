@@ -3,7 +3,7 @@ const projects = [
         title: "Swiggy Clone",
         description: "Swiggy UI clone built using HTML, Tailwind CSS.",
         image: "Images/Projects/1.png",
-        github: "https://github.com/rahulkumaracharya199-prog/Swiggy-Clone"
+        github: "https://github.com/rahulacharya1/Swiggy-Clone"
     },
     {
         title: "Spotify Clone",
