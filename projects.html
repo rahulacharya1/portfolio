@@ -1,64 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects | Rahul Kumar Acharya</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(12px); }
+        
+        /* Custom Professional Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #020617; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #020617; }
+
+        .project-card:hover img { transform: scale(1.1); }
+    </style>
 </head>
 
-<body class="bg-slate-900 text-gray-200 min-h-screen flex flex-col">
+<body class="bg-slate-950 text-gray-200 min-h-screen flex flex-col selection:bg-sky-500/30">
 
-    <!-- Navbar -->
-    <header class="flex items-center justify-between px-5 md:px-20 py-6">
-        <a href="home.html" class="text-2xl font-bold text-sky-400">
-            Rahul<span class="text-white"> Acharya</span>
-        </a>
+    <header class="fixed top-0 w-full z-50 glass border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+            <h1 class="text-2xl font-bold tracking-tighter">
+                <a href="home.html"><span class="text-sky-400">RAHUL</span><span class="text-white">.ACHARYA</span></a>
+            </h1>
 
-        <!-- Desktop Nav -->
-        <nav class="space-x-6 hidden md:block">
-            <a href="home.html" class="hover:text-sky-400 transition">Home</a>
-            <a href="about.html" class="hover:text-sky-400 transition">About</a>
-            <a href="skills.html" class="hover:text-sky-400 transition">Skills</a>
-            <a href="projects.html" class="text-sky-400 font-semibold">Projects</a>
-            <a href="certificates.html" class="hover:text-sky-400 transition">Certificates</a>
-            <a href="contact.html" class="hover:text-sky-400 transition">Contact</a>
-        </nav>
+            <nav class="hidden md:flex items-center space-x-8 font-medium">
+                <a href="home.html" class="hover:text-sky-400 transition">Home</a>
+                <a href="about.html" class="hover:text-sky-400 transition">About</a>
+                <a href="skills.html" class="hover:text-sky-400 transition">Skills</a>
+                <a href="projects.html" class="text-sky-400 transition">Projects</a>
+                <a href="certificates.html" class="hover:text-sky-400 transition">Certificates</a>
+                <a href="contact.html" class="hover:text-sky-400 transition">Contact</a>
+                <a href="assets/resume.pdf" target="_blank" class="px-4 py-2 border border-sky-400 text-sky-400 rounded-lg hover:bg-sky-400 hover:text-slate-900 transition text-sm font-bold">
+                    RESUME
+                </a>
+            </nav>
 
-        <!-- Mobile Button -->
-        <button id="menu-btn" class="md:hidden text-3xl text-sky-400 focus:outline-none">
-            ☰
-        </button>
+            <button id="menu-btn" class="md:hidden text-2xl text-sky-400 focus:outline-none">
+                <i class="fa-solid fa-bars-staggered" id="menu-icon"></i>
+            </button>
+        </div>
     </header>
 
-    <!-- Mobile Menu -->
-    <nav id="mobile-menu"
-        class="hidden md:hidden flex flex-col gap-4 bg-slate-800 px-6 py-6 text-center">
-        <a href="home.html" class="hover:text-sky-400">Home</a>
-        <a href="about.html" class="hover:text-sky-400">About</a>
-        <a href="skills.html" class="hover:text-sky-400">Skills</a>
-        <a href="projects.html" class="text-sky-400 font-semibold">Projects</a>
-        <a href="certificates.html" class="hover:text-sky-400">Certificates</a>
-        <a href="contact.html" class="hover:text-sky-400">Contact</a>
+    <nav id="mobile-menu" class="hidden fixed top-[73px] left-0 w-full bg-slate-900 border-b border-slate-800 z-40 p-8 flex flex-col gap-6 text-xl text-center shadow-2xl animate-menu">
+        <a href="home.html" class="py-2 border-b border-slate-800">Home</a>
+        <a href="about.html" class="py-2 border-b border-slate-800">About</a>
+        <a href="skills.html" class="py-2 border-b border-slate-800">Skills</a>
+        <a href="projects.html" class="text-sky-400 py-2 border-b border-slate-800">Projects</a>
+        <a href="certificates.html" class="py-2 border-b border-slate-800">Certificates</a>
+        <a href="contact.html" class="py-2 border-b border-slate-800">Contact</a>
+        <a href="assets/resume.pdf" target="_blank" class="text-sky-400 font-bold py-2 bg-sky-400/10 rounded-lg">Resume</a>
     </nav>
 
-    <!-- Projects Section -->
-    <main class="flex-1 px-6 md:px-10 py-10">
-        <div class="max-w-6xl mx-auto">
-
-            <h2 class="text-4xl font-bold text-center mb-14">
+    <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto flex-1">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">
                 My <span class="text-sky-400">Projects</span>
             </h2>
-
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10" id="projects-container">
-                <!-- Using Array and Loop -->
-            </div>
+            <p class="text-slate-400 max-w-2xl mx-auto text-lg font-light">
+                From complex <span class="text-sky-400">Django</span> backends to interactive <span class="text-sky-400">React</span> interfaces.
+            </p>
         </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-container">
+            </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="text-center py-6 text-gray-500 bg-slate-950">
-        © 2025 Rahul Kumar Acharya. All rights reserved.
+    <footer class="text-center py-10 text-slate-500 bg-slate-950 border-t border-slate-900">
+        <p class="text-sm">© 2026 Rahul Kumar Acharya • Built with Tailwind & Django</p>
     </footer>
 
     <script src="JS/projects.js"></script>

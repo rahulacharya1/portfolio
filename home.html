@@ -3,125 +3,158 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rahul Kumar Acharya | Portfolio</title>
+    
+    <title>Rahul Kumar Acharya | Full-Stack Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Rahul Kumar Acharya, a Full-Stack Developer specialized in Django, React, and Tailwind CSS. Based in Patna, Bihar, building end-to-end web solutions.">
+    <meta name="keywords" content="Rahul Kumar Acharya, Full-Stack Developer, Django Developer Patna, React Developer Bihar, BiharSeva, Web Development">
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .glass { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(12px); }
+        
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-menu { animation: fadeInDown 0.3s ease-out forwards; }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+    
+        ::-webkit-scrollbar-track {
+            background: #020617;
+        }
+    
+        ::-webkit-scrollbar-thumb {
+            background: #020617;
+            border-radius: 10px;
+        }
+    
+        ::-webkit-scrollbar-thumb:hover {
+            background: #020617;
+        }
+    
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+    </style>
 </head>
-<body class="bg-slate-900 text-gray-200 min-h-screen">
+<body class="bg-slate-950 text-gray-200 min-h-screen selection:bg-sky-500 selection:text-white">
 
-    <!-- Navbar -->
-    <header class="flex items-center justify-between px-5 md:px-20 py-6">
+    <header class="fixed top-0 w-full z-50 glass border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+            <h1 class="text-2xl font-bold tracking-tighter">
+                <a href="home.html"><span class="text-sky-400">RAHUL</span><span class="text-white">.ACHARYA</span></a>
+            </h1>
 
-        <h1 class="text-2xl font-bold text-sky-400">
-            Rahul<span class="text-white"> Acharya</span>
-        </h1>
+            <nav class="hidden md:flex items-center space-x-8 font-medium">
+                <a href="home.html" class="text-sky-400 transition">Home</a>
+                <a href="about.html" class="hover:text-sky-400 transition">About</a>
+                <a href="skills.html" class="hover:text-sky-400 transition">Skills</a>
+                <a href="projects.html" class="hover:text-sky-400 transition">Projects</a>
+                <a href="certificates.html" class="hover:text-sky-400 transition">Certificates</a>
+                <a href="contact.html" class="hover:text-sky-400 transition">Contact</a>
+                <a href="assets/resume.pdf" target="_blank" class="px-4 py-2 border border-sky-400 text-sky-400 rounded-lg hover:bg-sky-400 hover:text-slate-900 transition text-sm font-bold">
+                    RESUME
+                </a>
+            </nav>
 
-        <!-- Desktop Menu -->
-        <nav class="space-x-6 hidden md:block">
-            <a href="home.html" class="text-sky-400">Home</a>
-            <a href="about.html" class="hover:text-sky-400">About</a>
-            <a href="skills.html" class="hover:text-sky-400">Skills</a>
-            <a href="projects.html" class="hover:text-sky-400">Projects</a>
-            <a href="certificates.html" class="hover:text-sky-400">Certificates</a>
-            <a href="contact.html" class="hover:text-sky-400">Contact</a>
-        </nav>
-
-        <!-- Mobile Menu Button -->
-        <button id="menu-btn" class="md:hidden text-3xl text-sky-400">
-            ☰
-        </button>
+            <button id="menu-btn" class="md:hidden text-2xl text-sky-400 focus:outline-none p-2">
+                <i class="fa-solid fa-bars-staggered" id="menu-icon"></i>
+            </button>
+        </div>
     </header>
 
-    <!-- Mobile Dropdown -->
-    <nav id="mobile-menu"
-        class="hidden flex flex-col gap-4 bg-slate-800 p-5 text-center md:hidden">
-        <a href="home.html" class="text-sky-400">Home</a>
-        <a href="about.html" class="hover:text-sky-400">About</a>
-        <a href="skills.html" class="hover:text-sky-400">Skills</a>
-        <a href="projects.html" class="hover:text-sky-400">Projects</a>
-        <a href="certificates.html" class="hover:text-sky-400">Certificates</a>
-        <a href="contact.html" class="hover:text-sky-400">Contact</a>
+    <nav id="mobile-menu" class="hidden fixed top-[73px] left-0 w-full bg-slate-900 border-b border-slate-800 z-40 p-8 flex flex-col gap-6 text-xl text-center shadow-2xl animate-menu">
+        <a href="home.html" class="text-sky-400 py-2 border-b border-slate-800">Home</a>
+        <a href="about.html" class="py-2 border-b border-slate-800">About</a>
+        <a href="skills.html" class="py-2 border-b border-slate-800">Skills</a>
+        <a href="projects.html" class="py-2 border-b border-slate-800">Projects</a>
+        <a href="certificates.html" class="py-2 border-b border-slate-800">Certificates</a>
+        <a href="contact.html" class="py-2 border-b border-slate-800">Contact</a>
+        <a href="assets/resume.pdf" target="_blank" class="text-sky-400 font-bold py-2 bg-sky-400/10 rounded-lg">Resume</a>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="mt-10 md:mt-20 flex items-center px-5 md:px-20">
-        <div class="grid md:grid-cols-2 gap-10 md:gap-40 items-center w-full">
-
-            <!-- Left Content -->
-            <div>
-                <h2 class="text-4xl md:text-6xl font-bold leading-tight">
-                    Hi, I'm <br />
-                    <span class="text-sky-400">Rahul Kumar Acharya</span>
+    <main class="pt-40 pb-20 px-6 max-w-7xl mx-auto">
+        <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-16">
+            
+            <div class="w-full md:w-3/5 text-center md:text-left">
+                <p class="text-sky-400 font-mono mb-4 tracking-[0.2em] uppercase text-xs md:text-sm font-semibold">Code • Design • Deploy</p>
+                <h2 class="text-5xl md:text-7xl font-extrabold leading-tight text-white mb-6">
+                    Hi, I'm <span class="text-sky-400">Rahul Acharya</span>
                 </h2>
 
-                <p class="mt-4 text-xl text-sky-300">
-                    Frontend Developer
+                <p class="text-xl md:text-2xl text-slate-300 font-light mb-6">
+                    Building the future of the web with 
+                    <span class="border-b-2 border-sky-500 text-white">React, Django & Tailwind</span>.
                 </p>
 
-                <p class="mt-6 max-w-lg text-gray-400 leading-relaxed">
-                    I build modern, responsive and user-friendly websites using
-                    <span class="text-white">HTML, CSS, JavaScript, React, Tailwind CSS</span> and
-                    <span class="text-white">Firebase</span>.
+                <p class="max-w-lg text-slate-400 leading-relaxed mx-auto md:mx-0 text-lg mb-10">
+                    Passionate <span class="text-white font-semibold">Full-Stack Developer</span> specialized in 
+                    architecting end-to-end solutions, from robust <span class="text-sky-300">Django</span> backends 
+                    to responsive <span class="text-sky-300">React</span> interfaces for complex web applications.
                 </p>
 
-                <p class="mt-6 max-w-lg text-gray-400 leading-relaxed">
-                    Passionate about building real-world projects and solving problems with code.
-                </p>
-
-                <!-- Buttons -->
-                <div class="mt-8 flex gap-4 flex-wrap">
-                    <a href="projects.html"
-                        class="px-6 py-3 bg-sky-400 text-slate-900 rounded-full font-semibold hover:bg-sky-300 transition">
-                        View My Work
+                <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-12">
+                    <a href="projects.html" class="px-10 py-4 bg-sky-500 text-slate-950 rounded-xl font-bold shadow-lg shadow-sky-500/30 hover:bg-sky-400 transition-all hover:-translate-y-1 active:scale-95">
+                        View Projects
                     </a>
-
-                    <a href="contact.html"
-                        class="px-6 py-3 border border-sky-400 text-sky-400 rounded-full hover:bg-sky-400 hover:text-slate-900 transition">
-                        Contact Me
+                    <a href="contact.html" class="px-10 py-4 bg-slate-900 border border-slate-700 rounded-xl font-bold hover:bg-slate-800 transition-all hover:border-slate-500">
+                        Get In Touch
                     </a>
                 </div>
 
-                <!-- Social Links -->
-                <div class="flex gap-4 mt-10">
-                    <a href="https://www.linkedin.com/in/rahulkumaracharya/"
-                        target="_blank"
-                        class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-sky-400 hover:text-slate-900 transition">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-
-                    <a href="https://github.com/rahulacharya1"
-                        target="_blank"
-                        class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-sky-400 hover:text-slate-900 transition">
-                        <i class="fab fa-github"></i>
-                    </a>
-
-                    <a href="https://www.instagram.com/rahul_acharya457/"
-                        target="_blank"
-                        class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-sky-400 hover:text-slate-900 transition">
-                        <i class="fab fa-instagram"></i>
-                    </a>
+                <div class="flex justify-center md:justify-start gap-6">
+                    <a href="https://linkedin.com/in/rahulkumaracharya/" target="_blank" class="text-2xl text-slate-400 hover:text-sky-400 hover:-translate-y-1 transition-all" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/rahulacharya1" target="_blank" class="text-2xl text-slate-400 hover:text-white hover:-translate-y-1 transition-all" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://instagram.com/rahul_acharya457/" target="_blank" class="text-2xl text-slate-400 hover:text-pink-500 hover:-translate-y-1 transition-all" title="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
 
-            <!-- Right Image -->
-            <div class="flex justify-center">
-                <img src="Images/Rahul.png" alt="Rahul Kumar Acharya"
-                    class="w-64 md:w-96 rounded-2xl shadow-xl" />
+            <div class="w-full md:w-2/5 flex justify-center relative">
+                <div class="absolute inset-0 bg-sky-500/10 blur-[120px] rounded-full scale-125"></div>
+                
+                <div class="relative">
+                    <div class="absolute -inset-2 bg-gradient-to-tr from-sky-500 to-indigo-500 rounded-[2.5rem] opacity-20 blur-sm"></div>
+                    <img src="Images/Rahul.png" alt="Rahul Kumar Acharya" 
+                         class="relative w-64 md:w-80 lg:w-96 rounded-[2rem] shadow-2xl border border-slate-800 hover:border-sky-400/40 transition duration-700 ease-in-out" />
+                </div>
             </div>
-
         </div>
-    </section>
+    </main>
 
-    <!-- Mobile Toggle Script -->
     <script>
         const btn = document.getElementById("menu-btn");
         const menu = document.getElementById("mobile-menu");
+        const menuIcon = document.getElementById("menu-icon");
 
         btn.addEventListener("click", () => {
-            menu.classList.toggle("hidden");
+            const isHidden = menu.classList.toggle("hidden");
+            
+            // Toggle icon classes between hamburger and X
+            if (isHidden) {
+                menuIcon.classList.add("fa-bars-staggered");
+                menuIcon.classList.remove("fa-xmark");
+            } else {
+                menuIcon.classList.remove("fa-bars-staggered");
+                menuIcon.classList.add("fa-xmark");
+            }
+        });
+
+        // Close menu if a link is clicked
+        const navLinks = menu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                menuIcon.classList.add("fa-bars-staggered");
+                menuIcon.classList.remove("fa-xmark");
+            });
         });
     </script>
 

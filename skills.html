@@ -1,68 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Skills | Rahul Kumar Acharya</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(12px); }
+        
+        /* Custom Sky-Blue Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #020617; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #020617; }
+
+        .skill-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .skill-card:hover { transform: translateY(-10px); border-color: #38bdf8; box-shadow: 0 20px 25px -5px rgba(14, 165, 233, 0.1); }
+    </style>
 </head>
-<body class="bg-slate-900 text-gray-200">
+<body class="bg-slate-950 text-gray-200">
 
-    <!-- Navbar -->
-    <header class="flex items-center justify-between px-5 md:px-20 py-6">
+    <header class="fixed top-0 w-full z-50 glass border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+            <h1 class="text-2xl font-bold tracking-tighter">
+                <a href="home.html"><span class="text-sky-400">RAHUL</span><span class="text-white">.ACHARYA</span></a>
+            </h1>
 
-        <a href="home.html" class="text-2xl font-bold text-sky-400">
-            Rahul<span class="text-white"> Acharya</span>
-        </a>
+            <nav class="hidden md:flex items-center space-x-8 font-medium">
+                <a href="home.html" class="hover:text-sky-400 transition">Home</a>
+                <a href="about.html" class="hover:text-sky-400 transition">About</a>
+                <a href="skills.html" class="text-sky-400 transition">Skills</a>
+                <a href="projects.html" class="hover:text-sky-400 transition">Projects</a>
+                <a href="certificates.html" class="hover:text-sky-400 transition">Certificates</a>
+                <a href="contact.html" class="hover:text-sky-400 transition">Contact</a>
+                <a href="assets/resume.pdf" target="_blank" class="px-4 py-2 border border-sky-400 text-sky-400 rounded-lg hover:bg-sky-400 hover:text-slate-900 transition text-sm font-bold">
+                    RESUME
+                </a>
+            </nav>
 
-        <!-- Desktop -->
-        <nav class="space-x-6 hidden md:block">
-            <a href="home.html" class="hover:text-sky-400">Home</a>
-            <a href="about.html" class="hover:text-sky-400">About</a>
-            <a href="skills.html" class="text-sky-400">Skills</a>
-            <a href="projects.html" class="hover:text-sky-400">Projects</a>
-            <a href="certificates.html" class="hover:text-sky-400">Certificates</a>
-            <a href="contact.html" class="hover:text-sky-400">Contact</a>
-        </nav>
-
-        <!-- Mobile -->
-        <button id="menu-btn" class="md:hidden text-3xl text-sky-400">
-            ☰
-        </button>
+            <button id="menu-btn" class="md:hidden text-2xl text-sky-400">
+                <i class="fa-solid fa-bars-staggered" id="menu-icon"></i>
+            </button>
+        </div>
     </header>
 
-    <!-- Mobile Dropdown -->
-    <nav id="mobile-menu" class="hidden flex flex-col gap-4 bg-slate-800 p-5 text-center md:hidden">
-        <a href="home.html" class="hover:text-sky-400">Home</a>
-        <a href="about.html" class="hover:text-sky-400">About</a>
-        <a href="skills.html" class="text-sky-400">Skills</a>
-        <a href="projects.html" class="hover:text-sky-400">Projects</a>
-        <a href="certificates.html" class="hover:text-sky-400">Certificates</a>
-        <a href="contact.html" class="hover:text-sky-400">Contact</a>
+    <nav id="mobile-menu" class="hidden fixed top-[73px] left-0 w-full bg-slate-900 border-b border-slate-800 z-40 p-8 flex flex-col gap-6 text-xl text-center shadow-2xl animate-menu">
+        <a href="home.html" class="py-2 border-b border-slate-800">Home</a>
+        <a href="about.html" class="py-2 border-b border-slate-800">About</a>
+        <a href="skills.html" class="text-sky-400 py-2 border-b border-slate-800">Skills</a>
+        <a href="projects.html" class="py-2 border-b border-slate-800">Projects</a>
+        <a href="certificates.html" class="py-2 border-b border-slate-800">Certificates</a>
+        <a href="contact.html" class="py-2 border-b border-slate-800">Contact</a>
+        <a href="assets/resume.pdf" target="_blank" class="text-sky-400 font-bold py-2 bg-sky-400/10 rounded-lg">Resume</a>
     </nav>
 
-    <!-- Skills Section -->
-    <section class="px-5 md:px-20 mt-10">
-        <div class="max-w-6xl mx-auto w-full">
-
-            <!-- Title -->
-            <h2 class="text-4xl font-bold text-center mb-14">
-                My <span class="text-sky-400">Skills</span>
+    <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">
+                Technical <span class="text-sky-400">Arsenal</span>
             </h2>
-
-            <!-- Skills Grid -->
-            <div id="skills-container" class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-                <!-- Using Array and Loop -->
-            </div>
+            <p class="text-slate-400 max-w-3xl mx-auto text-lg">
+                My professional toolkit for building, scaling, and deploying full-stack applications.
+            </p>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="text-center py-6 text-gray-500 bg-slate-950 mt-16">
-        © 2025 Rahul Kumar Acharya. All rights reserved.
+        <div id="skills-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+    </main>
+
+    <footer class="text-center py-10 text-slate-500 bg-slate-950 border-t border-slate-900">
+        <p class="text-sm">© 2026 Rahul Kumar Acharya • Full-Stack Developer</p>
     </footer>
 
-    <script src="JS/skills.js"></script>
+    <script>
+        const skills = [
+            { title: "React", desc: "Building dynamic UIs with Hooks, Context API, and modern state management.", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+            { title: "Django", desc: "Developing secure backends, RESTful APIs, and complex database architectures.", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" },
+            { title: "Python", desc: "Core backend logic, automation scripts, and data manipulation.", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+            
+            { title: "Tailwind CSS", desc: "Rapid UI development with a utility-first approach and custom design systems.", img: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" },
+            { title: "JavaScript", desc: "ES6+ expertise, asynchronous programming, and DOM optimization.", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+            { title: "Firebase", desc: "Real-time databases, Google Authentication, and serverless functions.", img: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" },
 
+            { title: "Vercel", desc: "Frontend deployment and hosting with a focus on speed and performance.", img: "https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg" },
+            { title: "Netlify", desc: "Continuous deployment for modern web projects and serverless features.", img: "https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg" },
+            { title: "Render", desc: "Deploying full-stack applications, web services, and static sites easily.", img: "https://render.com/brand/render_1105076560.svg" },
+            
+            { title: "Git & GitHub", desc: "Professional version control, collaborative workflows, and CI/CD basics.", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+            { title: "HTML5 & CSS3", desc: "Semantic structure, responsive design, and cross-browser compatibility.", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" }
+        ];
+
+        const container = document.getElementById("skills-container");
+
+        skills.forEach(skill => {
+            container.innerHTML += `
+                <div class="skill-card bg-slate-900/40 border border-slate-800 p-8 rounded-[2rem] shadow-xl flex flex-col items-center text-center">
+                    <div class="w-20 h-20 mb-6 flex items-center justify-center bg-white rounded-2xl p-4">
+                        <img src="${skill.img}" alt="${skill.title}" class="w-full h-full object-contain" />
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">
+                        ${skill.title}
+                    </h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        ${skill.desc}
+                    </p>
+                </div>
+            `;
+        });
+
+        // Mobile Menu Logic
+        const btn = document.getElementById("menu-btn");
+        const menu = document.getElementById("mobile-menu");
+        const menuIcon = document.getElementById("menu-icon");
+
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+            if (menu.classList.contains("hidden")) {
+                menuIcon.classList.replace("fa-xmark", "fa-bars-staggered");
+            } else {
+                menuIcon.classList.replace("fa-bars-staggered", "fa-xmark");
+            }
+        });
+
+        // Simple Back to Top logic
+        const topBtn = document.createElement("button");
+        topBtn.innerHTML = "↑";
+        topBtn.className = "fixed bottom-8 right-8 bg-sky-500 text-slate-950 w-12 h-12 rounded-full font-bold shadow-lg hidden z-50 transition-all hover:scale-110";
+        document.body.appendChild(topBtn);
+        
+        window.onscroll = () => {
+            if (window.scrollY > 500) topBtn.classList.remove("hidden");
+            else topBtn.classList.add("hidden");
+        };
+        
+        topBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    </script>
+    
 </body>
 </html>

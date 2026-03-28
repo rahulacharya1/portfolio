@@ -3,87 +3,124 @@ const projects = [
         title: "Swiggy Clone",
         description: "Swiggy UI clone built using HTML, Tailwind CSS.",
         image: "Images/Projects/1.png",
-        github: "https://github.com/rahulacharya1/Swiggy-Clone"
+        github: "https://github.com/rahulacharya1/Swiggy-Clone",
+        live: ""
     },
     {
         title: "Spotify Clone",
         description: "Spotify UI clone built using HTML, CSS.",
         image: "Images/Projects/3.png",
-        github: "https://github.com/rahulkumaracharya199-prog/SpotifyClone"
+        github: "https://github.com/rahulkumaracharya199-prog/SpotifyClone",
+        live: ""
     },
     {
         title: "Amazon Clone",
         description: "Amazon UI built using HTML, CSS.",
         image: "Images/Projects/2.png",
-        github: "https://github.com/rahulkumaracharya199-prog/Amazon-Clone"
+        github: "https://github.com/rahulkumaracharya199-prog/Amazon-Clone",
+        live: ""
     },
     {
         title: "Calculator",
         description: "Responsive Calculator built using HTML, Tailwind CSS, and JavaScript.",
         image: "Images/Projects/4.png",
-        github: "https://github.com/rahulkumaracharya199-prog/calculator-web-project"
+        github: "https://github.com/rahulkumaracharya199-prog/calculator-web-project",
+        live: ""
     },
     {
         title: "Password Strength Checker",
         description: "Responsive Password Checker built using HTML, Tailwind CSS, and JavaScript.",
         image: "Images/Projects/5.png",
-        github: "https://github.com/rahulkumaracharya199-prog/password-strength-checker"
+        github: "https://github.com/rahulkumaracharya199-prog/password-strength-checker",
+        live: ""
     },
     {
         title: "Tic Tac Toe Game",
         description: "Responsive Tic Tac Toe game built with HTML, Tailwind CSS, and JavaScript.",
         image: "Images/Projects/6.png",
-        github: "https://github.com/rahulkumaracharya199-prog/tic-tac-toe"
+        github: "https://github.com/rahulkumaracharya199-prog/tic-tac-toe",
+        live: ""
     },
     {
         title: "Foodie House POS System",
         description: "Modern Restaurant (POS) system built with HTML, Tailwind CSS, and JavaScript.",
         image: "Images/Projects/7.png",
-        github: "https://github.com/rahulkumaracharya199-prog/foodie-house-pos"
+        github: "https://github.com/rahulkumaracharya199-prog/foodie-house-pos",
+        live: ""
     },
     {
         title: "Personal Portfolio Website",
         description: "A fully responsive Personal Portfolio built with HTML, Tailwind CSS, and JavaScript.",
         image: "Images/Projects/8.png",
-        github: "https://github.com/rahulkumaracharya199-prog/portfolio"
+        github: "https://github.com/rahulkumaracharya199-prog/portfolio",
+        live: ""
     },
-
 ];
 
 const container = document.getElementById("projects-container");
 
 projects.forEach(project => {
+    // Check if live link exists to show/hide the button
+    const liveBtn = project.live 
+        ? `<a href="${project.live}" target="_blank" class="px-4 py-2 bg-sky-500 text-slate-950 rounded-lg font-bold text-xs hover:bg-sky-400 transition-all flex items-center gap-2">
+            <i class="fa-solid fa-rocket"></i> Live
+           </a>` 
+        : "";
+
     container.innerHTML += `
-        <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-lg 
-                    hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+        <div class="group bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden shadow-xl hover:border-sky-500/50 hover:-translate-y-1 transition-all duration-300 flex flex-col">
+            
+            <div class="relative overflow-hidden h-48 bg-slate-800">
+                <img src="${project.image}" alt="${project.title}"
+                     class="w-full h-full object-cover opacity-80" 
+                     onerror="this.src='https://via.placeholder.com/400x200?text=Preview+Coming+Soon'"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"></div>
+            </div>
 
-            <img src="${project.image}" alt="${project.title}"
-                 class="w-full h-48 object-cover bg-slate-700" />
-
-            <div class="p-6">
-                <h3 class="text-xl font-semibold text-sky-400 mb-2">
+            <div class="p-6 flex flex-col flex-1">
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-sky-400 transition-colors">
                     ${project.title}
                 </h3>
 
-                <p class="text-gray-400 mb-2 text-md h-12">
+                <p class="text-slate-400 mb-6 text-sm leading-relaxed flex-1">
                     ${project.description}
                 </p>
 
-                <a href="${project.github}" target="_blank"
-                   class="text-sky-400 font-semibold hover:underline">
-                    GitHub
-                </a>
+                <div class="flex items-center justify-between mt-auto pt-4 border-t border-slate-800">
+                    <a href="${project.github}" target="_blank"
+                       class="flex items-center gap-2 text-slate-400 font-semibold hover:text-white transition-all text-sm">
+                        <i class="fa-brands fa-github text-lg"></i> GitHub
+                    </a>
+                    
+                    ${liveBtn}
+                </div>
             </div>
         </div>
     `;
 });
 
-
-/* Mobile Menu */
-
+/* Mobile Menu Logic */
 const menuBtn = document.getElementById("menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
+const menuIcon = document.getElementById("menu-icon");
 
 menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
+    const isHidden = mobileMenu.classList.toggle("hidden");
+    if(menuIcon) {
+        menuIcon.classList.replace(isHidden ? "fa-xmark" : "fa-bars-staggered", isHidden ? "fa-bars-staggered" : "fa-xmark");
+    }
 });
+
+// Simple Back to Top logic
+const topBtn = document.createElement("button");
+topBtn.innerHTML = "↑";
+topBtn.className = "fixed bottom-8 right-8 bg-sky-500 text-slate-950 w-12 h-12 rounded-full font-bold shadow-lg hidden z-50 transition-all hover:scale-110";
+document.body.appendChild(topBtn);
+
+window.onscroll = () => {
+    if (window.scrollY > 500) topBtn.classList.remove("hidden");
+    else topBtn.classList.add("hidden");
+};
+
+topBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
