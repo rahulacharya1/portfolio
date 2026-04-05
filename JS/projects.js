@@ -1,26 +1,5 @@
 const projects = [
     {
-        title: "Swiggy Clone",
-        description: "Swiggy UI clone built using HTML, Tailwind CSS.",
-        image: "Images/Projects/1.png",
-        github: "https://github.com/rahulacharya1/Swiggy-Clone",
-        live: ""
-    },
-    {
-        title: "Spotify Clone",
-        description: "Spotify UI clone built using HTML, CSS.",
-        image: "Images/Projects/3.png",
-        github: "https://github.com/rahulkumaracharya199-prog/SpotifyClone",
-        live: ""
-    },
-    {
-        title: "Amazon Clone",
-        description: "Amazon UI built using HTML, CSS.",
-        image: "Images/Projects/2.png",
-        github: "https://github.com/rahulkumaracharya199-prog/Amazon-Clone",
-        live: ""
-    },
-    {
         title: "Calculator",
         description: "Responsive Calculator built using HTML, Tailwind CSS, and JavaScript.",
         image: "Images/Projects/4.png",
