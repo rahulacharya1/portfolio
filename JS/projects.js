@@ -1,38 +1,52 @@
 const projects = [
     {
-        title: "Calculator",
-        description: "Responsive Calculator built using HTML, Tailwind CSS, and JavaScript.",
-        image: "Images/Projects/4.png",
-        github: "https://github.com/rahulkumaracharya199-prog/calculator-web-project",
-        live: ""
+        "title": "EduMarks",
+        "description": "Professional Academic Management System with dynamic marksheet generation, secure result verification, and SEO-optimized institutional portals using Django and Tailwind CSS.",
+        "image": "Images/Projects/1.png",
+        "github": "https://github.com/rahulacharya1/MarksheetGenerator",
+        "live": "https://edumarks.acharyaworks.in/" 
     },
     {
-        title: "Password Strength Checker",
-        description: "Responsive Password Checker built using HTML, Tailwind CSS, and JavaScript.",
-        image: "Images/Projects/5.png",
-        github: "https://github.com/rahulkumaracharya199-prog/password-strength-checker",
-        live: ""
+        "title": "TechlancePrep",
+        "description": "High-performance Engineering Command Center for mastering DSA and System Design. Features granular user telemetry, secure 'Identity Vault' profiles, and a robust administrative CRUD engine built with Django and Tailwind CSS.",
+        "image": "Images/Projects/2.png",
+        "github": "https://github.com/rahulacharya1/techlanceprep",
+        "live": "https://techlanceprep.onrender.com/" 
     },
     {
-        title: "Tic Tac Toe Game",
-        description: "Responsive Tic Tac Toe game built with HTML, Tailwind CSS, and JavaScript.",
-        image: "Images/Projects/6.png",
-        github: "https://github.com/rahulkumaracharya199-prog/tic-tac-toe",
-        live: ""
+        "title": "Personal Portfolio Website",
+        "description": "A fully responsive Personal Portfolio built with HTML, Tailwind CSS, and JavaScript.",
+        "image": "Images/Projects/8.png",
+        "github": "https://github.com/rahulacharya1/portfolio",
+        "live": "https://acharyarahul.in/" 
     },
     {
-        title: "Foodie House POS System",
-        description: "Modern Restaurant (POS) system built with HTML, Tailwind CSS, and JavaScript.",
-        image: "Images/Projects/7.png",
-        github: "https://github.com/rahulkumaracharya199-prog/foodie-house-pos",
-        live: ""
+        "title": "Calculator",
+        "description": "Responsive Calculator built using HTML, Tailwind CSS, and JavaScript.",
+        "image": "Images/Projects/4.png",
+        "github": "https://github.com/rahulacharya1/calculator-web-project",
+        "live": ""
     },
     {
-        title: "Personal Portfolio Website",
-        description: "A fully responsive Personal Portfolio built with HTML, Tailwind CSS, and JavaScript.",
-        image: "Images/Projects/8.png",
-        github: "https://github.com/rahulkumaracharya199-prog/portfolio",
-        live: ""
+        "title": "Password Strength Checker",
+        "description": "Responsive Password Checker built using HTML, Tailwind CSS, and JavaScript.",
+        "image": "Images/Projects/5.png",
+        "github": "https://github.com/rahulacharya1/password-strength-checker",
+        "live": ""
+    },
+    {
+        "title": "Tic Tac Toe Game",
+        "description": "Responsive Tic Tac Toe game built with HTML, Tailwind CSS, and JavaScript.",
+        "image": "Images/Projects/6.png",
+        "github": "https://github.com/rahulacharya1/tic-tac-toe",
+        "live": ""
+    },
+    {
+        "title": "Foodie House POS System",
+        "description": "Modern Restaurant (POS) system built with HTML, Tailwind CSS, and JavaScript.",
+        "image": "Images/Projects/7.png",
+        "github": "https://github.com/rahulacharya1/foodie-house-pos",
+        "live": ""
     },
 ];
 
@@ -47,7 +61,7 @@ projects.forEach(project => {
         : "";
 
     container.innerHTML += `
-        <div class="group bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden shadow-xl hover:border-sky-500/50 hover:-translate-y-1 transition-all duration-300 flex flex-col">
+        <div class="group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-xl hover:border-sky-500/50 hover:-translate-y-1 transition-all duration-300 flex flex-col">
             
             <div class="relative overflow-hidden h-48 bg-slate-800">
                 <img src="${project.image}" alt="${project.title}"
