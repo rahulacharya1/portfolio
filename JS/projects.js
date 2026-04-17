@@ -4,14 +4,21 @@ const projects = [
         "description": "Professional Academic Management System with dynamic marksheet generation, secure result verification, and SEO-optimized institutional portals using Django and Tailwind CSS.",
         "image": "Images/Projects/1.png",
         "github": "https://github.com/rahulacharya1/MarksheetGenerator",
-        "live": "https://edumarks.acharyaworks.in/" 
+        "live": "" 
     },
     {
         "title": "TechlancePrep",
         "description": "High-performance Engineering Command Center for mastering DSA and System Design. Features granular user telemetry, secure 'Identity Vault' profiles, and a robust administrative CRUD engine built with Django and Tailwind CSS.",
         "image": "Images/Projects/2.png",
         "github": "https://github.com/rahulacharya1/techlanceprep",
-        "live": "https://techlanceprep.onrender.com/" 
+        "live": "" 
+    },
+    {
+        "title": "PrepWise",
+        "description": "Architected an AI-driven interview orchestration platform for full-stack developers. Features dynamic domain-based routing, a specialized 'STAR Method' behavioral engine, and a low-latency coding laboratory with integrated syntax-themed solution modeling and high-fidelity Framer Motion animations.",
+        "image": "Images/Projects/3.png", 
+        "github": "https://github.com/rahulacharya1/prepwise",
+        "live": "" 
     },
     {
         "title": "Personal Portfolio Website",
