@@ -154,19 +154,7 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeImg();
 });
 
-/* Mobile Menu Logic */
-const menuBtn = document.getElementById("menu-btn");
-const mobileMenu = document.getElementById("mobile-menu");
-const menuIcon = document.getElementById("menu-icon");
-
-menuBtn.addEventListener("click", () => {
-    const isHidden = mobileMenu.classList.toggle("hidden");
-    if(menuIcon) {
-        menuIcon.classList.replace(isHidden ? "fa-xmark" : "fa-bars-staggered", isHidden ? "fa-bars-staggered" : "fa-xmark");
-    }
-});
-
-// Simple Back to Top logic
+/* Simple Back to Top logic */
 const topBtn = document.createElement("button");
 topBtn.innerHTML = "↑";
 topBtn.className = "fixed bottom-8 right-8 bg-sky-500 text-slate-950 w-12 h-12 rounded-full font-bold shadow-lg hidden z-50 transition-all hover:scale-110";
